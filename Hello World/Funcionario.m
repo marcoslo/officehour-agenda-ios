@@ -26,6 +26,23 @@
 }
 
 
+-(BOOL) salvar
+{
+    NSLog(@"Olá, acabei de salvar este funcionario.");
+    return YES;
+}
+
+-(BOOL) excluir
+{
+    NSLog(@"Olá, acabei de excluir este funcionario.");
+    return YES;
+}
+
+-(void) dizerOla
+{
+    NSLog(@"Olá.");
+}
+
 -(id)initWithPessoa:(Pessoa*)pessoa departamento:(NSString*)departamento salario:(float)salario cargo:(NSString*)cargo
 {
     self = [super init];

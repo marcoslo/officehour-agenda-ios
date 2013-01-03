@@ -11,8 +11,9 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "Persistencia.h"
 
-@interface Pessoa : NSObject {
+@interface Pessoa : NSObject <Persistencia> {
     
     @protected
     NSString *_nome;

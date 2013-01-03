@@ -25,6 +25,18 @@
     return _telefone;
 }
 
+-(BOOL)salvar
+{
+    NSLog(@"Olá, acabei de salvar esta pessoa");
+    return YES;
+}
+
+-(BOOL)excluir
+{
+    NSLog(@"Olá, acabei de excluir esta pessoa");
+    return YES;
+}
+
 -(void)setNome:(NSString*)nome email:(NSString*)email
 {
     _nome = nome;
