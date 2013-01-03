@@ -10,12 +10,27 @@
 
 @implementation Pessoa
 
+-(NSString*)getEmail
+{
+    return _email;
+}
+
+-(NSString*)getNome
+{
+    return _nome;
+}
+
+-(NSNumber*)getTelefone
+{
+    return _telefone;
+}
 
 -(void)setNome:(NSString*)nome email:(NSString*)email
 {
     _nome = nome;
     _email = email;
 }
+
 
 -(NSString*)meApresentar
 {

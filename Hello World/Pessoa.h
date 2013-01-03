@@ -13,11 +13,19 @@
 #import <Foundation/Foundation.h>
 
 @interface Pessoa : NSObject {
+    
+    @protected
     NSString *_nome;
     NSString *_email;
+    NSNumber *_telefone;
+    
 }
 
 -(NSString*) meApresentar;
 -(void)setNome:(NSString*)nome email:(NSString*)email;
+
+-(NSString*) getNome;
+-(NSString*) getEmail;
+-(NSNumber*) getTelefone;
 
 @end

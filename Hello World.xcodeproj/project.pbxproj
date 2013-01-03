@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D01EC1C1694DC430029C26E /* Funcionario.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D01EC1B1694DC430029C26E /* Funcionario.m */; };
 		1D08FC40168F6A7900DD46A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D08FC3F168F6A7900DD46A1 /* UIKit.framework */; };
 		1D08FC42168F6A7900DD46A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D08FC41168F6A7900DD46A1 /* Foundation.framework */; };
 		1D08FC44168F6A7900DD46A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D08FC43168F6A7900DD46A1 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D01EC1A1694DC430029C26E /* Funcionario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Funcionario.h; sourceTree = "<group>"; };
+		1D01EC1B1694DC430029C26E /* Funcionario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Funcionario.m; sourceTree = "<group>"; };
 		1D08FC3B168F6A7900DD46A1 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D08FC3F168F6A7900DD46A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D08FC41168F6A7900DD46A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D01EC181694DC300029C26E /* Funcionario */ = {
+			isa = PBXGroup;
+			children = (
+				1D01EC1A1694DC430029C26E /* Funcionario.h */,
+				1D01EC1B1694DC430029C26E /* Funcionario.m */,
+			);
+			name = Funcionario;
+			sourceTree = "<group>";
+		};
 		1D08FC30168F6A7900DD46A1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		1D08FC45168F6A7900DD46A1 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				1D01EC181694DC300029C26E /* Funcionario */,
 				1D08FC62168F6C4300DD46A1 /* Pessoa */,
 				1D08FC4E168F6A7900DD46A1 /* AppDelegate.h */,
 				1D08FC4F168F6A7900DD46A1 /* AppDelegate.m */,
@@ -190,6 +203,7 @@
 				1D08FC50168F6A7900DD46A1 /* AppDelegate.m in Sources */,
 				1D08FC5C168F6A7900DD46A1 /* ViewController.m in Sources */,
 				1D08FC65168F6C9400DD46A1 /* Pessoa.m in Sources */,
+				1D01EC1C1694DC430029C26E /* Funcionario.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +320,7 @@
 				1D08FC61168F6A7900DD46A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

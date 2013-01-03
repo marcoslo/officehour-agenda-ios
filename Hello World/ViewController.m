@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Pessoa.h"
+#import "Funcionario.h"
 
 @implementation ViewController
 
@@ -17,5 +18,8 @@
 	Pessoa *eu = [[Pessoa alloc] init];
     [eu setNome:@"Maurilio Henrique" email:@"mauriliohrc@gmail.com"];
     NSLog(@"Apresentação: %@", [eu meApresentar]);
+    
+    Funcionario *funcionario = [[Funcionario alloc] initWithPessoa:eu departamento:@"T.I" salario:1.0f cargo:@"Chapa"];
+    NSLog(@"Apresentação Funcionário: %@", [funcionario meApresentar]);
 }
 @end
