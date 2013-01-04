@@ -1,4 +1,14 @@
-officehour-agenda-ios
+Curso de Desenvolvimento iOS (iPhone/iPad)
 =====================
 
-Curso de desenvolvimento iOS
+Projeto desenvolvido e mantido pelo curso.
+
+Assista e acompanhe! 
+
+http://www.youtube.com/playlist?list=PL8A1jyqNPAiFMnQV0prsDtG7Ndmw1QDD2
+
+http://www.youtube.com/KiwiOfficeHour
+
+http://www.kiwitecnologia.com.br
+
+
