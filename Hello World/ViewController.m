@@ -15,6 +15,45 @@
 
 - (void)viewDidLoad
 {
+    
+    /* ARRAYS */
+    
+    NSArray *pessoas = [[NSArray alloc] initWithObjects:@"Maurilio", @"Chuck Norris", nil];
+    pessoas = @[@"Maurilio", @"Chuck Norris", @20];
+    NSLog(@"Array indice 1: %@", [pessoas objectAtIndex:1]);
+    
+    NSMutableArray *pessoas_mutaveis = [[NSMutableArray alloc] init];
+    [pessoas_mutaveis addObject:@"Maurilio"];
+    [pessoas_mutaveis addObject:@"Silvio Santos"];
+    [pessoas_mutaveis addObject:@"Dercy Goncalves"];
+    [pessoas_mutaveis removeObjectAtIndex:1];
+    NSLog(@"Array indice 1: %@", [pessoas_mutaveis objectAtIndex:1]);
+    
+    
+    
+    /* NSDictionary */
+    NSMutableArray *pessoas_dicionario = [[NSMutableArray alloc] init];
+    
+    NSMutableDictionary *pessoa = [[NSMutableDictionary alloc] init];
+    [pessoa setValue:@"Maurilio" forKey:@"nome"];
+    [pessoa setValue:@"mauriliohrc@gmail.com" forKey:@"email"];
+    [pessoas_dicionario addObject:pessoa];
+    
+    NSMutableDictionary *pessoa2 = [[NSMutableDictionary alloc] init];
+    [pessoa2 setValue:@"Silvio Santos" forKey:@"nome"];
+    [pessoa2 setValue:@"silvio@sbt.com.br" forKey:@"email"];
+    [pessoas_dicionario addObject:pessoa2];
+
+    
+    NSLog(@"--------------------------------------");
+    
+    for (NSMutableDictionary *item in pessoas_dicionario) {
+        NSLog(@"Nome: %@", [item objectForKey:@"nome"]);
+        NSLog(@"Email: %@", [item objectForKey:@"email"]);
+    }
+    
+    NSLog(@"--------------------------------------");
+    
     [super viewDidLoad];
 	Pessoa *eu = [[Pessoa alloc] init];
     [eu setNome:@"Maurilio Henrique" email:@"mauriliohrc@gmail.com"];
