@@ -20,6 +20,9 @@
 		1D08FC59168F6A7900DD46A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D08FC57168F6A7900DD46A1 /* MainStoryboard.storyboard */; };
 		1D08FC5C168F6A7900DD46A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D08FC5B168F6A7900DD46A1 /* ViewController.m */; };
 		1D08FC65168F6C9400DD46A1 /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D08FC64168F6C9400DD46A1 /* Pessoa.m */; };
+		1DBCA890169F97A0008ED63A /* banco.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1DBCA88F169F97A0008ED63A /* banco.sqlite */; };
+		1DBCA893169F97B8008ED63A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBCA892169F97B8008ED63A /* libsqlite3.dylib */; };
+		1DBCA897169F9980008ED63A /* Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCA896169F9980008ED63A /* Persistence.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,10 @@
 		1D08FC63168F6C9400DD46A1 /* Pessoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pessoa.h; sourceTree = "<group>"; };
 		1D08FC64168F6C9400DD46A1 /* Pessoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pessoa.m; sourceTree = "<group>"; };
 		1D8E968A16963A4800AEBF53 /* Persistencia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persistencia.h; sourceTree = "<group>"; };
+		1DBCA88F169F97A0008ED63A /* banco.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = banco.sqlite; sourceTree = "<group>"; };
+		1DBCA892169F97B8008ED63A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1DBCA895169F9980008ED63A /* Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persistence.h; sourceTree = "<group>"; };
+		1DBCA896169F9980008ED63A /* Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persistence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBCA893169F97B8008ED63A /* libsqlite3.dylib in Frameworks */,
 				1D08FC40168F6A7900DD46A1 /* UIKit.framework in Frameworks */,
 				1D08FC42168F6A7900DD46A1 /* Foundation.framework in Frameworks */,
 				1D08FC44168F6A7900DD46A1 /* CoreGraphics.framework in Frameworks */,
@@ -72,6 +80,7 @@
 		1D08FC30168F6A7900DD46A1 = {
 			isa = PBXGroup;
 			children = (
+				1DBCA892169F97B8008ED63A /* libsqlite3.dylib */,
 				1D08FC45168F6A7900DD46A1 /* Hello World */,
 				1D08FC3E168F6A7900DD46A1 /* Frameworks */,
 				1D08FC3C168F6A7900DD46A1 /* Products */,
@@ -99,6 +108,7 @@
 		1D08FC45168F6A7900DD46A1 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				1DBCA88F169F97A0008ED63A /* banco.sqlite */,
 				1D8E968916963A2300AEBF53 /* Protocolos */,
 				1D8E968816963A0300AEBF53 /* AppDelegate */,
 				1D8E9687169639FA00AEBF53 /* Controllers */,
@@ -135,6 +145,7 @@
 		1D8E9685169639E900AEBF53 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DBCA894169F992D008ED63A /* Persistence */,
 				1D01EC181694DC300029C26E /* Funcionario */,
 				1D08FC62168F6C4300DD46A1 /* Pessoa */,
 			);
@@ -165,6 +176,15 @@
 				1D8E968A16963A4800AEBF53 /* Persistencia.h */,
 			);
 			name = Protocolos;
+			sourceTree = "<group>";
+		};
+		1DBCA894169F992D008ED63A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				1DBCA895169F9980008ED63A /* Persistence.h */,
+				1DBCA896169F9980008ED63A /* Persistence.m */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +243,7 @@
 				1D08FC54168F6A7900DD46A1 /* Default@2x.png in Resources */,
 				1D08FC56168F6A7900DD46A1 /* Default-568h@2x.png in Resources */,
 				1D08FC59168F6A7900DD46A1 /* MainStoryboard.storyboard in Resources */,
+				1DBCA890169F97A0008ED63A /* banco.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +259,7 @@
 				1D08FC5C168F6A7900DD46A1 /* ViewController.m in Sources */,
 				1D08FC65168F6C9400DD46A1 /* Pessoa.m in Sources */,
 				1D01EC1C1694DC430029C26E /* Funcionario.m in Sources */,
+				1DBCA897169F9980008ED63A /* Persistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

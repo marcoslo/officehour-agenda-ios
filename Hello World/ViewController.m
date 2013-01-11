@@ -10,14 +10,43 @@
 #import "Pessoa.h"
 #import "Funcionario.h"
 #import "Persistencia.h"
+#import "Persistence.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     
+    Persistence *persistence = [[Persistence alloc] init];
+    NSDictionary *pessoa = @{
+                                @"tabela" : @"pessoa",
+                                @"campos" : @[
+                                                @{@"campo" : @"nome", @"valor" : @"Maurilio"} ,
+                                                @{@"campo" : @"email", @"valor" : @"mauriliohrc@gmail.com" },
+                                                @{@"campo" : @"telefone", @"valor" : @20 }
+                                             ]
+                            };
+    
+    [persistence incluir:pessoa];
+    [persistence incluir:pessoa];
+    [persistence incluir:pessoa];
+    
+    NSDictionary *dados = @{@"tabela":@"pessoa", @"valor":@2};
+    
+    [persistence excluir:dados];
+    
+    NSDictionary *funcionario = @{
+        @"tabela" : @"funcionario",
+        @"campos" : @[
+                     @{@"campo" : @"cargo", @"valor" : @"chapa" },
+                     @{@"campo" : @"pessoa_id", @"valor" : @1}
+            ]
+    };
+    [persistence incluir:funcionario];
+    
     /* ARRAYS */
     
+    /*
     NSArray *pessoas = [[NSArray alloc] initWithObjects:@"Maurilio", @"Chuck Norris", nil];
     pessoas = @[@"Maurilio", @"Chuck Norris", @20];
     NSLog(@"Array indice 1: %@", [pessoas objectAtIndex:1]);
@@ -28,10 +57,11 @@
     [pessoas_mutaveis addObject:@"Dercy Goncalves"];
     [pessoas_mutaveis removeObjectAtIndex:1];
     NSLog(@"Array indice 1: %@", [pessoas_mutaveis objectAtIndex:1]);
-    
+    */
     
     
     /* NSDictionary */
+    /*
     NSMutableArray *pessoas_dicionario = [[NSMutableArray alloc] init];
     
     NSMutableDictionary *pessoa = [[NSMutableDictionary alloc] init];
@@ -44,7 +74,7 @@
     [pessoa2 setValue:@"silvio@sbt.com.br" forKey:@"email"];
     [pessoas_dicionario addObject:pessoa2];
 
-    
+
     NSLog(@"--------------------------------------");
     
     for (NSMutableDictionary *item in pessoas_dicionario) {
@@ -89,6 +119,6 @@
     } else {
         NSLog(@"Este objeto não implementa o protocol Persistencia");
     }
-    
+        */
 }
 @end
