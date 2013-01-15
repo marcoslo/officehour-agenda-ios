@@ -25,8 +25,8 @@
 -(NSString*) meApresentar;
 -(void)setNome:(NSString*)nome email:(NSString*)email;
 
--(NSString*) getNome;
--(NSString*) getEmail;
--(NSNumber*) getTelefone;
+@property (nonatomic, strong) NSString *nome;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSNumber *telefone;
 
 @end

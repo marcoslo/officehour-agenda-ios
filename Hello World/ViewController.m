@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     
+    /*
     Persistence *persistence = [[Persistence alloc] init];
     NSDictionary *pessoa = @{
                                 @"tabela" : @"pessoa",
@@ -43,10 +44,21 @@
             ]
     };
     [persistence incluir:funcionario];
+    */
+    
+    /* properties */
+    
+    Pessoa *pessoaP = [[Pessoa alloc] init];
+    
+    [pessoaP setEmail:@"joao@joao.com"];
+    [pessoaP setTelefone:@20];
+    [pessoaP setNome:@"João"];
+    
+    NSLog(@"Property, pessoa nome: %@", pessoaP.nome);
     
     /* ARRAYS */
     
-    /*
+     
     NSArray *pessoas = [[NSArray alloc] initWithObjects:@"Maurilio", @"Chuck Norris", nil];
     pessoas = @[@"Maurilio", @"Chuck Norris", @20];
     NSLog(@"Array indice 1: %@", [pessoas objectAtIndex:1]);
@@ -57,11 +69,11 @@
     [pessoas_mutaveis addObject:@"Dercy Goncalves"];
     [pessoas_mutaveis removeObjectAtIndex:1];
     NSLog(@"Array indice 1: %@", [pessoas_mutaveis objectAtIndex:1]);
-    */
+    
     
     
     /* NSDictionary */
-    /*
+    
     NSMutableArray *pessoas_dicionario = [[NSMutableArray alloc] init];
     
     NSMutableDictionary *pessoa = [[NSMutableDictionary alloc] init];
@@ -119,6 +131,6 @@
     } else {
         NSLog(@"Este objeto não implementa o protocol Persistencia");
     }
-        */
+        
 }
 @end

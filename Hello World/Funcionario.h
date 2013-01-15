@@ -17,4 +17,8 @@
 -(id)initWithPessoa:(Pessoa*)pessoa departamento:(NSString*)departamento salario:(float)salario cargo:(NSString*)cargo;
 -(id)init;
 
+@property (nonatomic, strong) NSString *departamento;
+@property (nonatomic, strong) NSString *cargo;
+@property (nonatomic, readwrite) float salario;
+
 @end

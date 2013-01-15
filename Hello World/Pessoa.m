@@ -10,20 +10,10 @@
 
 @implementation Pessoa
 
--(NSString*)getEmail
-{
-    return _email;
-}
+@synthesize nome = _nome;
+@synthesize email = _email;
+@synthesize telefone = _telefone;
 
--(NSString*)getNome
-{
-    return _nome;
-}
-
--(NSNumber*)getTelefone
-{
-    return _telefone;
-}
 
 -(BOOL)salvar
 {

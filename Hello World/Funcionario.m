@@ -10,6 +10,10 @@
 
 @implementation Funcionario
 
+@synthesize cargo = _cargo;
+@synthesize departamento = _departamento;
+@synthesize salario = _salario;
+
 -(NSString*)meApresentar
 {
     NSString *apresentacao = [NSString stringWithFormat:@"Olá, sou o %@, e meu email é %@, trabalho no departamento %@ como %@ e recebo por mês %f.", _nome, _email, _departamento, _cargo, _salario];
@@ -47,9 +51,9 @@
 {
     self = [super init];
     if (self) {
-        _nome = [pessoa getNome];
-        _email = [pessoa getEmail];
-        _telefone = [pessoa getTelefone];
+        _nome = pessoa.nome;
+        _email = pessoa.email;
+        _telefone = pessoa.telefone;
         _departamento = departamento;
         _salario = salario;
         _cargo = cargo;
