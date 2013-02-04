@@ -14,6 +14,16 @@
 
 @implementation ViewController
 
+@synthesize campoNome = _campoNome;
+@synthesize resposta = _resposta;
+
+-(IBAction)toqueBotao:(id)sender
+{
+    NSString *textoDigitado = _campoNome.text;
+    NSString *resposta = [NSString stringWithFormat:@"Texto Digitado: %@", textoDigitado];
+    [_resposta setText:resposta];
+}
+
 - (void)viewDidLoad
 {
     

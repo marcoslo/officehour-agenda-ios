@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    
+}
+
+
+-(IBAction)toqueBotao:(id)sender;
+
+@property (nonatomic, strong) IBOutlet UILabel *resposta;
+@property (nonatomic, strong) IBOutlet UITextField *campoNome;
 
 @end
