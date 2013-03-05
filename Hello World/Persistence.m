@@ -70,7 +70,7 @@
 
 
 
--(void)incluir:(NSDictionary *)dados
+-(BOOL)incluir:(NSDictionary *)dados
 {
     if (sqlite3_open([_path UTF8String], &_bancoDeDados) == SQLITE_OK) {
         
@@ -79,12 +79,15 @@
         
         if (sqlite3_exec(_bancoDeDados, [sql UTF8String], NULL, NULL, &erro) == SQLITE_OK) {
             NSLog(@"Registro incluso com sucesso");
+            return YES;
         } else {
             NSLog(@"Falha ao incluir, SQL: %@", sql);
+            return NO;
         }
         
         sqlite3_close(_bancoDeDados);
     } else {
+        return NO;
         NSLog(@"Falha ao abrir o banco no caminho: %@", _path);
     }
 }

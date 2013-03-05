@@ -14,7 +14,7 @@
     NSString *_path;
 }
 
--(void)incluir:(NSDictionary *)dados;
+-(BOOL)incluir:(NSDictionary *)dados;
 -(void)excluir:(NSDictionary *)dados;
 
 @end

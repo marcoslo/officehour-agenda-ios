@@ -15,13 +15,44 @@
 @implementation ViewController
 
 @synthesize campoNome = _campoNome;
-@synthesize resposta = _resposta;
+@synthesize campoEmail = _campoEmail;
+@synthesize campoTelefone = _campoTelefone;
 
 -(IBAction)toqueBotao:(id)sender
 {
-    NSString *textoDigitado = _campoNome.text;
-    NSString *resposta = [NSString stringWithFormat:@"Texto Digitado: %@", textoDigitado];
-    [_resposta setText:resposta];
+    
+    NSString *nome = _campoNome.text;
+    NSString *email = _campoEmail.text;
+    NSNumber *fone = [NSNumber numberWithInteger:[_campoTelefone.text integerValue]];
+    
+    Pessoa *pessoa = [[Pessoa alloc] init];
+    [pessoa setNome:nome];
+    [pessoa setEmail:email];
+    [pessoa setTelefone:fone];
+
+    Persistence *persistencia = [[Persistence alloc] init];
+    NSDictionary *dados = @{
+      @"tabela" : @"pessoa",
+      @"campos" :
+          @[
+              @{ @"campo": @"nome", @"valor" : pessoa.nome },
+              @{ @"campo": @"email", @"valor" : pessoa.email },
+              @{ @"campo": @"telefone", @"valor" : pessoa.telefone }
+              ]
+      };
+    
+    if ([persistencia incluir:dados]) {
+        
+        [_campoTelefone setText:@""];
+        [_campoEmail setText:@""];
+        [_campoNome setText:@""];
+        
+    } else {
+        
+        UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Falha ao incluir pessoa." delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles:nil, nil];
+        [alerta show];
+        
+    }
 }
 
 - (void)viewDidLoad

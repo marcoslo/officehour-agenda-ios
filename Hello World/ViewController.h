@@ -16,7 +16,8 @@
 
 -(IBAction)toqueBotao:(id)sender;
 
-@property (nonatomic, strong) IBOutlet UILabel *resposta;
 @property (nonatomic, strong) IBOutlet UITextField *campoNome;
+@property (nonatomic, strong) IBOutlet UITextField *campoEmail;
+@property (nonatomic, strong) IBOutlet UITextField *campoTelefone;
 
 @end
